@@ -33,6 +33,8 @@
 #name{
     margin-left:auto;
     margin-right:auto;
+    font-weight: bold;
+    margin-top:15px;
 }
 
 #move-list{
@@ -50,9 +52,13 @@
 }
 
 .item-result{
-    padding-left:85px;
+    padding-left:75px;
 }
 
 .modal-item-label{
     font-weight: bold;
+}
+
+#move{
+    padding-top:8px;
 }

@@ -35,7 +35,7 @@ function PokemonModal(props) {
                 <div className = "item-result"> {modalInfo && modalInfo.stats.weight}</div>
             </div>
           </div>
-          <div id = "move-list" className = "modal-item"><div id = "move-list-title" className = "modal-item-label">Move List</div> <div id = "moves-list">{modalInfo && modalInfo.stats.moves.map(current => (<div key = {current.move.name}>{current.move.name}</div>))}</div></div>
+          <div id = "move-list" className = "modal-item"><div id = "move-list-title" className = "modal-item-label">Move List</div> <div id = "moves-list">{modalInfo && modalInfo.stats.moves.map(current => (<div id = "move" key = {current.move.name}>{current.move.name}</div>))}</div></div>
         </Modal>
       )}
     </>
