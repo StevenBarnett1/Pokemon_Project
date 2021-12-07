@@ -1,0 +1,45 @@
+#pokemon-table{
+    border:1px solid black;
+    margin:auto;
+    margin-bottom:15px;
+    border-collapse: collapse;
+}
+
+.pokemon-data{
+    border-top:1px solid lightgrey;
+    border-bottom:1px solid black;
+}
+td{
+    border:1px solid black;
+    padding:10px 10px;
+    text-align: center;
+}
+tr{
+    cursor:pointer;
+}
+
+tr:hover{
+    background-color: rgb(214, 214, 214);
+}
+
+
+#pokemon-page-outer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:700px;
+    margin:auto;
+}
+
+#pokemon-heading{
+    margin-left:auto;
+    margin-right:auto;
+    width:auto;
+}
+
+#page-buttons{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    margin-bottom:15px;
+}

@@ -1,9 +1,11 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import pokemonReducer from './pokemon';
+import modalReducer from './modal';
 
 const rootReducer = combineReducers({
-    pokemon:pokemonReducer
+    pokemon:pokemonReducer,
+    modal:modalReducer
   });
 
 
