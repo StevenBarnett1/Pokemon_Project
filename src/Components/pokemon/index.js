@@ -3,6 +3,8 @@ import {useDispatch,useSelector} from "react-redux"
 import {getPokemon} from "../../store/pokemon"
 import { getPokemonStats } from "../../store/pokemon"
 import "./pokemon.css"
+import PokemonModal from "../Modal"
+import { toggleModalView, setModalInfo } from "../../store/modal"
 
 const Pokemon = () => {
     const dispatch = useDispatch()
@@ -24,12 +26,14 @@ const Pokemon = () => {
         setCurrentIndex(currentIndex-10)
     }
 
-    const rowClick = () => {
-        
+    const rowClick = (pokemon) => {
+        dispatch(toggleModalView(true))
+        dispatch(setModalInfo(pokemon))
     }
 
     console.log("CURRENT STATS: ",currentPokemon)
     return (
+        <>
         <div id = "pokemon-page-outer">
             <h1 id = "pokemon-heading">Pokemon</h1>
             <table id = "pokemon-table">
@@ -41,7 +45,7 @@ const Pokemon = () => {
                     <th>Types</th>
                 </tr>
                 {currentPokemon && currentPokemon.map(individual => (
-                    <tr className = "pokemon-data" key = {individual.name} onClick = {()=>rowClick()}>
+                    <tr className = "pokemon-data" key = {individual.name} onClick = {()=>rowClick(individual)}>
                         <td style = {{color:individual.stats.color}}>{individual.name}</td>
                         <td style = {{color:individual.stats.color}}>{individual.stats.abilities.map((current)=>(<div key = {current.ability.name}>{current.ability.name}</div>))}</td>
                         <td style = {{color:individual.stats.color}}>{individual.stats.forms.map((form)=>(<div key = {form.name}>{form.name}</div>))}</td>
@@ -56,6 +60,9 @@ const Pokemon = () => {
             </div>
 
         </div>
+        <PokemonModal/>
+        </>
+
     )
 }
 

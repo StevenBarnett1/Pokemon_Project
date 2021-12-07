@@ -1,5 +1,5 @@
 const SET_MODAL_INFO = "modal/SET_MODAL_INFO"
-const TOGGLE_MODAL_VIEW = "modal/TOOGLE_MODAL_VIEW"
+const TOGGLE_MODAL_VIEW = "modal/TOGGLE_MODAL_VIEW"
 
 export const setModalInfo = (info) => {
     return {
