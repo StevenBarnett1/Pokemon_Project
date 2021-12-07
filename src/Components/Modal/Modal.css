@@ -5,10 +5,23 @@
     text-align: center;
 }
 
-.modal-item{
+#attributes{
     display:flex;
-    margin-top: 25px;
-    margin-left:35px;
+    margin-left:70px;
+}
+
+#left{
+    display:flex;
+    flex-direction: column;
+}
+
+#right{
+    display:flex;
+    flex-direction: column;
+}
+
+#left > *, #right > *{
+    margin-top:25px;
 }
 
 
@@ -23,6 +36,7 @@
 }
 
 #move-list{
+    margin-top:25px;
     display: flex;
     flex-direction: column;
     margin-left:auto;
@@ -36,5 +50,9 @@
 }
 
 .item-result{
-    padding-left:80px;
+    padding-left:85px;
+}
+
+.modal-item-label{
+    font-weight: bold;
 }
