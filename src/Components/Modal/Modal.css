@@ -1,5 +1,40 @@
 #moves-list{
-    height:40px;
+    height:200px;
     overflow-y: scroll;
+    width:100%;
+    text-align: center;
 }
 
+.modal-item{
+    display:flex;
+    margin-top: 25px;
+    margin-left:35px;
+}
+
+
+.mapped-types{
+    display:flex;
+    flex-direction: row;
+}
+
+#name{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#move-list{
+    display: flex;
+    flex-direction: column;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+#move-list-title{
+    margin-bottom:25px;
+    text-align: center;
+}
+
+.item-result{
+    padding-left:80px;
+}
