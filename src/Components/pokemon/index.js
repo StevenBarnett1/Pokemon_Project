@@ -10,6 +10,7 @@ const Pokemon = () => {
     const dispatch = useDispatch()
 
     let [currentIndex,setCurrentIndex] = useState(0)
+    let [currentPage,setCurrentPage] = useState(1)
     let results = useSelector(state=>state.pokemon.results)
     let currentPokemon = useSelector(state=>state.pokemon.current)
     console.log(results)
@@ -20,10 +21,12 @@ const Pokemon = () => {
 
     const nextPage = () => {
         setCurrentIndex(currentIndex+10)
+        setCurrentPage(currentPage+1)
     }
 
     const previousPage = () => {
         setCurrentIndex(currentIndex-10)
+        setCurrentPage(currentPage-1)
     }
 
     const rowClick = (pokemon) => {
@@ -31,7 +34,6 @@ const Pokemon = () => {
         dispatch(setModalInfo(pokemon))
     }
 
-    console.log("CURRENT STATS: ",currentPokemon)
     return (
         <>
         <div id = "pokemon-page-outer">
@@ -56,6 +58,7 @@ const Pokemon = () => {
             </table>
             <div id = "page-buttons">
                 <button onClick = {()=>previousPage()} style = {currentIndex === 0 ? {visibility:"hidden"} : {visibility:"visible"}}>Previous Page</button>
+                <div>{currentPage}/{results && Math.ceil(results.length/10)}</div>
                 <button onClick = {()=>nextPage()}>Next Page</button>
             </div>
 
