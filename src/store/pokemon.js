@@ -40,13 +40,7 @@ export const getPokemonStats = (pokemon) => async dispatch => {
 export const getPokemon = () => async dispatch => {
     let res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1118")
     res = await res.json()
-    // for(let result of res.results){
-    //     let dataRes = await fetch(`${result.url}`)
-    //     dataRes = await dataRes.json()
-    //     result.data = dataRes
-    //     console.log("?")
-    // }
-    console.log("result here: ",res)
+
     dispatch(setPokemon(res))
 }
 

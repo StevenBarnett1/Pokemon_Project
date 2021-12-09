@@ -13,7 +13,6 @@ const Pokemon = () => {
     let [currentPage,setCurrentPage] = useState(1)
     let results = useSelector(state=>state.pokemon.results)
     let currentPokemon = useSelector(state=>state.pokemon.current)
-    console.log(results)
 
     useEffect(()=>{
         if(results)dispatch(getPokemonStats(results.slice(currentIndex,currentIndex+10)))

@@ -10,7 +10,6 @@ function PokemonModal(props) {
   const modalView = useSelector(state => state.modal.modalView)
   const modalInfo = useSelector(state => state.modal.modalInfo)
 
-  console.log("INFO: ",modalInfo)
 
   const handleOnModalClose = () => {
     dispatch(toggleModalView(false))
